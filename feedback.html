@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <title>Document</title>
+</head>
+<style>
+    p {
+        font-family: 'Jost', sans-serif;
+        color: #0050d5;
+        font-weight: 600;
+    }
+
+    .return-link a {
+        font-family: 'Jost', sans-serif;
+        font-weight: 600;
+        color: #0050d5;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+
+    .query-form .container {
+        background-color: #fafafa;
+    }
+
+    @media screen and (max-width: 575px) {
+        .query-form .container {
+            width: 90%;
+            margin: 50px auto !important;
+            padding: 4%;
+        }
+    }
+
+    form input,
+    textarea {
+        font-family: 'Jost', sans-serif !important;
+        font-weight: 600 !important;
+    }
+
+    form label {
+        font-family: 'Jost', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16.8px;
+    }
+
+    .active input:focus:not([readonly]) {
+        border: 1px solid #0050d5;
+        box-shadow: 0 0 0 1px #0050d5;
+    }
+
+    .active textarea[type=text]:focus([readonly]) {
+        border: 1px solid #0050d5;
+        box-shadow: 0 0 0 1px #0050d5;
+    }
+
+    .textarea-border-focus .form-control:focus {
+        border: 1px solid #0050d5;
+        box-shadow: 0 0 0 1px #0050d5;
+    }
+    .btn-blue {
+        background-color: #0050d5;
+    }
+</style>
+<body>
+    <div>
+        <div class="return-link  pt-3">
+            <a href="index.html" class="ps-3 "> Back to contact</a>
+        </div>
+    
+    
+        <!-- Query Form -->
+        <div class="feedback-form">
+            <div class="container border rounded col-lg-5 col-md-7 mt-lg-4 mt-md-5 mt-sm-5 mx-auto p-lg-5 p-md-4 p-sm-4  ">
+                <form action="https://formspree.io/f/xayvjgen" method="POST">
+                    <!--  input name -->
+                    <div class="active mb-3">
+                        <label for="name">Your name</label>
+                        <input type="text" id="name" name="Name" class="form-control " autocomplete="off" required>
+                    </div>
+    
+                    <br>
+    
+                    <!--  input email -->
+                    <div class="active mb-3">
+                        <label for="email">Your email</label>
+                        <input type="email" id="email" name="Email" class="form-control " autocomplete="off" required>
+                    </div>
+    
+                    <br>
+    
+                    <!--  textarea query -->
+                    <div class="form-group textarea-border-focus">
+                        <label for="query">Your Feedback</label>
+                        <textarea class="form-control" name="Query" id="query" rows="4" required></textarea>
+                    </div>
+    
+                    <div class="text-center mt-4 mb-2">
+                        <button class="btn btn-blue text-light" id="query-btn">Send
+                            <i class="fa fa-send ml-2 text-light"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- end -->
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+</html>
